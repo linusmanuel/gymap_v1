@@ -1,7 +1,30 @@
 import "package:flutter/material.dart";
+import "package:flutter_gymapp_live/modelos/Sentimento_modelo.dart";
+import "package:flutter_gymapp_live/modelos/exercicio_modelo.dart";
 
 class ExercicioTela extends StatelessWidget {
-  const ExercicioTela({super.key});
+  ExercicioTela({super.key});
+
+  final ExercicioModelo exercicioModelo = ExercicioModelo (
+    id: 'Ex001',
+    nome: 'Remada Baixa Supinada',
+    treino: 'Treino A',
+    comoFazer: 'Segura a barra e puxa',
+    urlImagem: ''
+  );
+
+  final List<SentimentoModelo> listaSentimentos = [
+    SentimentoModelo(
+      id: 'SE001', 
+      sentimento: 'Senti pouca ativação hoje', 
+      data: '2024-06-25'
+    ),
+    SentimentoModelo(
+        id: 'SE002',
+        sentimento: 'Senti alguma ativação hoje',
+        data: '2024-06-26'),
+  
+  ];
 
   @override
   Widget build(BuildContext context) {
