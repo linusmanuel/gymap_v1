@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter/widgets.dart";
 import "package:flutter_gymapp_live/modelos/Sentimento_modelo.dart";
 import "package:flutter_gymapp_live/modelos/exercicio_modelo.dart";
 
@@ -23,155 +24,12 @@ class ExercicioTela extends StatelessWidget {
         id: 'SE002',
         sentimento: 'Senti alguma ativação hoje',
         data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
-    SentimentoModelo(
-      id: 'SE001', 
-      sentimento: 'Senti pouca ativação hoje', 
-      data: '2024-06-25'
-    ),
-    SentimentoModelo(
-        id: 'SE002',
-        sentimento: 'Senti alguma ativação hoje',
-        data: '2024-06-26'),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(title: Text("${exercicioModelo.nome} / ${exercicioModelo.treino}")),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -179,14 +37,32 @@ class ExercicioTela extends StatelessWidget {
         }, 
         child: const Icon(Icons.add),
       ),
-      body: Padding(
+      body: Container(
+        margin: const EdgeInsets.all(8),
         padding: const EdgeInsets.all(16.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+        ),
         child: ListView(
           children: [
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Enviar foto'),
+            SizedBox(
+              height: 250,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Enviar foto'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {}, 
+                    child: const Text('Tirar foto'),
+                  )
+                ],
+              ),
             ),
+            const SizedBox(height: 8),
             const Text(
               'Como fazer',
               style: TextStyle(
@@ -196,7 +72,11 @@ class ExercicioTela extends StatelessWidget {
             ),
             const Text(
               'Segura com as duas mãos na barra, mantem a coluna reta, e puxa'),
-            Divider(),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Divider(color: Colors.black),
+            ),
+            const SizedBox(height: 8),
             const Text(
               'Como estou me sentindo?',
               style: TextStyle(
@@ -208,7 +88,22 @@ class ExercicioTela extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: List.generate(listaSentimentos.length, (index) {
               SentimentoModelo sentimentoAgora = listaSentimentos[index];
-              return Text(sentimentoAgora.sentimento);
+              return ListTile(
+                dense: true,
+                contentPadding: EdgeInsets.zero,
+                title: Text(sentimentoAgora.sentimento), 
+                subtitle: Text(sentimentoAgora.data),  
+                leading: const Icon(Icons.double_arrow),
+                trailing: IconButton(
+                  icon: const Icon(
+                    Icons.delete, 
+                    color: Colors.red,
+                  ),
+                  onPressed: () {
+                    print("DELETAR ${sentimentoAgora.sentimento}");
+                  },
+                )
+              );
             }))
           ],
         ),
