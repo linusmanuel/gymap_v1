@@ -30,7 +30,24 @@ class ExercicioTela extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      appBar: AppBar(title: Text("${exercicioModelo.nome} / ${exercicioModelo.treino}")),
+      appBar: AppBar(
+        title: Column(
+          children: [
+            Text(
+              exercicioModelo.nome,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white),
+            ),
+            Text(
+              exercicioModelo.treino,
+              style: const TextStyle(fontSize: 15, color: Colors.white),
+            ),
+          ]),
+          backgroundColor: const Color(0xFF0A6D92),
+          centerTitle: true,
+          elevation: 0,
+          toolbarHeight: 72,
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(16))),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('Foi clicado!');
