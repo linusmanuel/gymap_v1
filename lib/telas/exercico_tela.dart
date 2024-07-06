@@ -46,7 +46,9 @@ class ExercicioTela extends StatelessWidget {
           centerTitle: true,
           elevation: 0,
           toolbarHeight: 72,
-          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(16))),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(16))),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
