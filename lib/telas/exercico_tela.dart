@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
+import "package:flutter_gymapp_live/_comum/minhas_cores.dart";
 import "package:flutter_gymapp_live/modelos/Sentimento_modelo.dart";
 import "package:flutter_gymapp_live/modelos/exercicio_modelo.dart";
 
@@ -42,7 +43,7 @@ class ExercicioTela extends StatelessWidget {
               style: const TextStyle(fontSize: 15, color: Colors.white),
             ),
           ]),
-          backgroundColor: const Color(0xFF0A6D92),
+          backgroundColor: MinhasCores.azulEscuro,
           centerTitle: true,
           elevation: 0,
           toolbarHeight: 72,
