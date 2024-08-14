@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gymapp_live/_comum/minhas_cores.dart';
+import 'package:flutter_gymapp_live/componentes/decoracao_campo_autenticacao.dart';
 
 class AutenticacaoTela extends StatefulWidget {
   const AutenticacaoTela({super.key});
@@ -49,30 +50,25 @@ class _AutenticacaoTelaState extends State<AutenticacaoTela> {
                       ),
                       const SizedBox(height: 32.0,),
                       TextFormField(
-                        decoration: const InputDecoration(
-                          label: Text("Email"),
-                        ),
+                        decoration: getAuthenticationInputDecoration("E-mail"),
                       ),
+                      const SizedBox(height: 8.0,),
                       TextFormField(
-                        decoration: const InputDecoration(
-                          label: Text("Senha"),
-                        ),
+                        decoration: getAuthenticationInputDecoration("senha"),
                         obscureText: true,
                       ),
+                      const SizedBox(height: 8.0,),
                       Visibility(
                         visible: !queroEntrar,
                         child: Column(
                           children: [
                             TextFormField(
-                              decoration: const InputDecoration(
-                                label: Text("Confirme Senha")
-                              ),
+                              decoration: getAuthenticationInputDecoration("Confirme senha"),
                               obscureText: true,
                             ),
+                            const SizedBox(height: 8.0,),
                             TextFormField(
-                              decoration: const InputDecoration(
-                                label: Text("Nome"),
-                              ),
+                              decoration: getAuthenticationInputDecoration("nome"),
                             ),
                           ],
                         ),
