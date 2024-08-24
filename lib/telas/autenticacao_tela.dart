@@ -95,19 +95,6 @@ class _AutenticacaoTelaState extends State<AutenticacaoTela> {
                         visible: !queroEntrar,
                         child: Column(
                           children: [
-                            TextFormField(
-                              decoration: getAuthenticationInputDecoration("Confirme senha"),
-                              validator: (String? value) {
-                                if (value == null) {
-                                  return "A confirmação de senha não pode ser vazio";
-                                }
-                                if (value.length < 5) {
-                                  return "A confirmação de senha é muito curto";
-                                }
-                                return null;
-                              },
-                              obscureText: true,
-                            ),
                             const SizedBox(height: 8.0,),
                             TextFormField(
                               controller: _nomeController,
@@ -155,12 +142,12 @@ class _AutenticacaoTelaState extends State<AutenticacaoTela> {
     String senha = _senhaController.text;
 
     if(_formKey.currentState!.validate()) {
-      if(queroEntrar) {
-        print("Entrada validada");
+      if(!queroEntrar) {
+        print("Cadastro validado!");
         print("${_emailController.text}, ${_senhaController.text}, ${_nomeController.text}");
         _autenServico.cadastrarUsuario(nome: nome, senha: senha, email: email);
       } else {
-        print("Cadastro validado");
+        print("Login com sucesso");
       }
     } else {
       print("Form inválido");
